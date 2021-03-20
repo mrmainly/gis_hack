@@ -9,11 +9,10 @@ import { Container, Grid, Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     cont: {
-        backgroundColor: '#3d50b6',
+        backgroundColor: '#171717',
         color: "white",
         paddingTop: 25,
         paddingBottom: 25,
-        marginTop: 80
     },
     item: {
         display: "flex",

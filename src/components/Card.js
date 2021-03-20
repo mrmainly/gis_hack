@@ -10,37 +10,40 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        maxWidth: 290,
         marginBottom: 20,
         marginLeft: 10,
-        marginRight: 10
+        marginRight: 10,
+        marginTop: 10
     },
 });
 
-export default function ImgMediaCard({ img, text, title }) {
+export default function ImgMediaCard({ img, text, title, leverTrue, leverFalse }) {
     const [showElem, setShowElem] = useState(false)
     const classes = useStyles();
     console.log(img)
 
     return (
         <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    alt="Contemplative Reptile"
-                    height="180"
-                    image={img}
-                    title="Contemplative Reptile"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {text}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
+
+            <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="160"
+                image={img}
+                title="Contemplative Reptile"
+            />
+            <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p" style={{ height: 55, textOverflow: 'ellipsis', overflow: 'hidden' }}>
+                    {text}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }}>
+                    Перейти
+                    </Button>
+            </CardActions>
+
         </Card>
     );
 }

@@ -15,26 +15,26 @@ import { Link as RouterLink } from "react-router-dom";
 
 const headersData = [
     {
-        label: "Listings",
+        label: "Главная",
         href: "/listings",
     },
     {
-        label: "Mentors",
+        label: "Карта",
         href: "/mentors",
     },
     {
-        label: "My Account",
+        label: "О нас",
         href: "/account",
     },
     {
-        label: "Log Out",
+        label: "Контакты",
         href: "/logout",
     },
 ];
 
 const useStyles = makeStyles(() => ({
     header: {
-        backgroundColor: "#400CCC",
+        backgroundColor: "#171717",
         paddingRight: "79px",
         paddingLeft: "118px",
         "@media (max-width: 900px)": {
@@ -147,9 +147,7 @@ export default function Header() {
     };
 
     const femmecubatorLogo = (
-        <Typography variant="h6" component="h1" className={logo}>
-            Xenon
-        </Typography>
+        <img src={'/logo.svg'} style={{ width: 50, height: 50 }} />
     );
 
     const getMenuButtons = () => {
