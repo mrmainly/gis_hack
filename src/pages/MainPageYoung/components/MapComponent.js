@@ -14,7 +14,7 @@ const coordinates = [
 
 const mapStyles = {
     width: '100%',
-    height: '1000px'
+    height: '100%'
 }
 
 export default function MapComponent() {

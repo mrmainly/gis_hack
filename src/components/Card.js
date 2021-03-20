@@ -14,7 +14,9 @@ const useStyles = makeStyles({
         marginBottom: 20,
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 10
+        marginTop: 10,
+        borderBottomColor: 'blue',
+        borderBottom: 2
     },
 });
 

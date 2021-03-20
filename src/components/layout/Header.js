@@ -147,7 +147,7 @@ export default function Header() {
     };
 
     const femmecubatorLogo = (
-        <img src={'/logo.svg'} style={{ width: 50, height: 50 }} />
+        <img src={'/logo1.png'} style={{ width: 50, height: 50 }} />
     );
 
     const getMenuButtons = () => {

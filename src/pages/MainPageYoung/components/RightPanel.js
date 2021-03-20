@@ -34,7 +34,6 @@ const RightPanel = ({ data, state }) => {
         setValue(newValue);
     };
 
-
     const getFalse = () => {
         return (
             <div className={classes.container}>
@@ -59,7 +58,7 @@ const RightPanel = ({ data, state }) => {
                     container
                 >
                     {data.map((item, index) => (
-                        <Grid item key={index} lg={4} sm={6} md={4} xl={4} xs={12} >
+                        <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
                             <Card title={item.title} img={item.image} text={item.text} />
                         </Grid>
                     ))}
