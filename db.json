@@ -1,0 +1,60 @@
+{
+    "posts": [
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
+            "id": "1"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
+            "id": "2"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
+            "id": "3"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
+            "id": "4"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
+        },
+        {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "title": "title for text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
+        }
+    ],
+    "route": [
+        {
+            "id": "1",
+            "title": "kokoslayer",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU"
+        },
+        {
+            "id": "2",
+            "title": "jojo",
+            "image": "https://www.google.com/search?q=jojo&sxsrf=ALeKk01zHgACiYdMnQxHhrXbkq6Ikjpn9Q:1615426067778&tbm=isch&source=iu&ictx=1&fir=e6YwNLukbs-f-M%252CHFs1OwWyB-sqOM%252C_&vet=1&usg=AI4_-kSsccEAcUovnmRpO_6GQX43JuHwUQ&sa=X&ved=2ahUKEwjw3LiHi6fvAhVtoosKHW7oDIYQ9QF6BAgREAE#imgrc=e6YwNLukbs-f-M"
+        }
+    ]
+}
