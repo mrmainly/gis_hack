@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="white" align="center">
+        <Typography variant="body2" style={{ color: 'white' }} align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
                 Your Website
@@ -45,7 +45,7 @@ export default function Footer(props) {
                 <Typography variant="h6" align="center" gutterBottom>
                     Footer
         </Typography>
-                <Typography variant="subtitle1" align="center" color="white" component="p">
+                <Typography variant="subtitle1" align="center" style={{ color: 'white' }} component="p">
                     Something here to give the footer a purpose!
         </Typography>
                 <Copyright />

@@ -40,9 +40,7 @@ const MainPageYoung = () => {
                     <MapComponent />
                 </Grid>
                 <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
-
                     <RightPanel data={data} state={state} />
-
                 </Grid>
             </Grid>
         </Layout>

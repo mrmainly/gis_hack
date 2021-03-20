@@ -3,6 +3,8 @@ import MainPageYoung from './pages/MainPageYoung/mainPageYong'
 import axios from 'axios'
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import HomePage from './pages/HomePage/index'
+import About from './pages/About/about'
+import Faq from './pages/Faq/faq'
 
 function App() {
   const [data, setData] = useState([])
@@ -19,6 +21,8 @@ function App() {
     <Router>
       <Switch>
         <Route path="/maps" component={MainPageYoung} />
+        <Route path="/about" component={About} />
+        <Route path="/faq" component={Faq} />
         <Route path="/" component={HomePage} exact />
       </Switch>
     </Router>

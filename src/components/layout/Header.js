@@ -24,11 +24,11 @@ const headersData = [
     },
     {
         label: "О нас",
-        href: "/account",
+        href: "/about",
     },
     {
-        label: "Контакты",
-        href: "/logout",
+        label: "Вопрос/Ответ",
+        href: "/faq",
     },
 ];
 
@@ -59,6 +59,9 @@ const useStyles = makeStyles(() => ({
     },
     drawerContainer: {
         padding: "20px 30px",
+        backgroundColor: '#252525',
+        color: 'white',
+        height: '100%'
     },
 }));
 
@@ -123,7 +126,7 @@ export default function Header() {
                     <div className={drawerContainer}>{getDrawerChoices()}</div>
                 </Drawer>
 
-                <div>{femmecubatorLogo}</div>
+                <div style={{ marginLeft: '95%' }}>{femmecubatorLogo}</div>
             </Toolbar>
         );
     };

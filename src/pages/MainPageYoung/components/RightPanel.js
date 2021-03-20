@@ -18,17 +18,18 @@ const useStyles = makeStyles(() => ({
     TextStyle: {
         color: 'rgba(255, 255, 255, 0.6)',
         marginLeft: 10,
+        fontSize: 16
     },
     Backround: {
         backgroundColor: '#252525',
-        color: 'white',
-        marginTop: 10
+        color: '#fff',
+        marginTop: 15
     }
 }));
 
 const RightPanel = ({ data, state }) => {
     const classes = useStyles()
-    const [value, setValue] = React.useState(2);
+    const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -38,7 +39,7 @@ const RightPanel = ({ data, state }) => {
         return (
             <div className={classes.container}>
                 <Box style={{ marginTop: 40, }}>
-                    <Typography variant="h8" className={classes.TextStyle}>Фильтры поиска:</Typography>
+                    <Typography variant="h6" className={classes.TextStyle}>Фильтры поиска:</Typography>
                     <Paper square className={classes.Backround}>
                         <Tabs
                             value={value}
@@ -50,7 +51,7 @@ const RightPanel = ({ data, state }) => {
                         </Tabs>
                     </Paper>
                     <Box style={{ marginTop: 20, marginBottom: 20 }}>
-                        <Typography variant="h8" className={classes.TextStyle}>Результаты:</Typography>
+                        <Typography variant="h6" className={classes.TextStyle}>Результаты:</Typography>
                     </Box>
                 </Box>
                 <Grid

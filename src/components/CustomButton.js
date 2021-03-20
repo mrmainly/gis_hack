@@ -1,10 +1,34 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
+import * as React from 'react';
 
-export default function CustomButton({ text }) {
-    return (
-        <Button variant="contained" color="gray" size="small">
-            {text}
-        </Button>
-    );
-}
+import { makeStyles } from "@material-ui/styles";
+import { mainTheme } from "../styles";
+import { Box } from "@material-ui/core";
+
+const useClasses = makeStyles({
+    button: {
+        display: 'block',
+        backgroundColor: mainTheme.colors.red,
+        fontFamily: mainTheme.fontFamily.Roboto,
+        fontSize: mainTheme.textSizes.small,
+        color: 'white',
+        padding: '13px 15px',
+        margin: '40px auto',
+        border: 0,
+        borderTopLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        transition: 'all 0.3s ease',
+
+        "&:focus": {
+            outline: 'none'
+        },
+
+        "&:hover": {
+            opacity: 0.8
+        },
+    }
+})
+
+export const Button = ({ text, onClick }) => {
+    const classes = useClasses()
+    return <button className={classes.button} onClick={onClick}>{text}</button>
+};
