@@ -16,11 +16,11 @@ import { Link as RouterLink } from "react-router-dom";
 const headersData = [
     {
         label: "Главная",
-        href: "/listings",
+        href: "/",
     },
     {
         label: "Карта",
-        href: "/mentors",
+        href: "/maps",
     },
     {
         label: "О нас",

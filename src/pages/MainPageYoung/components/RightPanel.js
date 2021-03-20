@@ -12,7 +12,8 @@ import { Box } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
     container: {
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+
     },
     TextStyle: {
         color: 'rgba(255, 255, 255, 0.6)',
