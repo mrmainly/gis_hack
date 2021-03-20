@@ -49,7 +49,7 @@ const NewMangaList = ({ title }) => {
 
         <Container>
 
-            <Typography variant="h5" style={{ marginBottom: 15 }}>{title}</Typography>
+            {/* <Typography variant="h5" style={{ marginBottom: 15 }}>{title}</Typography>
             <Grid
                 wrap='wrap'
                 container
@@ -60,7 +60,9 @@ const NewMangaList = ({ title }) => {
                         <Card title={item.title} img={item.image} text={item.text} />
                     </Grid>
                 ))}
-            </Grid>
+            </Grid> */}
+
+            frgdrgergerg
 
         </Container>
 
