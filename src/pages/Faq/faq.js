@@ -11,7 +11,6 @@ export default function Faq() {
             <HeaderScreen />
             <FAQScreen marginTop={10} marginBottom={10} />
             <FeedbackScreen marginTop={10} marginBottom={5} />
-
         </Layout>
     );
 };

@@ -12,6 +12,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import { useHistory } from 'react-router-dom'
 
 const headersData = [
     {
@@ -21,10 +22,6 @@ const headersData = [
     {
         label: "Карта",
         href: "/maps",
-    },
-    {
-        label: "О нас",
-        href: "/about",
     },
     {
         label: "Вопрос/Ответ",
@@ -67,6 +64,7 @@ const useStyles = makeStyles(() => ({
 
 export default function Header() {
     const { header, logo, menuButton, toolbar, drawerContainer } = useStyles();
+    const history = useHistory()
 
     const [state, setState] = useState({
         mobileView: false,
@@ -150,7 +148,9 @@ export default function Header() {
     };
 
     const femmecubatorLogo = (
-        <img src={'/logo1.png'} style={{ width: 50, height: 50 }} />
+        <img src={'/logo1.png'} style={{ width: 50, height: 50, cursor: 'pointer' }} onClick={() => {
+            history.push('/')
+        }} />
     );
 
     const getMenuButtons = () => {
