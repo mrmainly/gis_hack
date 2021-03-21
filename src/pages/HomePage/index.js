@@ -34,7 +34,7 @@ const HomePage = () => {
             <BigPicture />
             <Box className={classes.container}>
                 <Grid item lg={6} sm={8} md={8} xl={6} xs={9}>
-                    <SidePanel data={data} />
+                    <SidePanel data={data} over={'visible'} height={'100%'} />
                 </Grid>
             </Box>
         </Layout>

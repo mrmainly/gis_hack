@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Context } from '../context/index'
 
 const useStyles = makeStyles({
     root: {
@@ -20,8 +21,8 @@ const useStyles = makeStyles({
     },
 });
 
-export default function ImgMediaCard({ img, text, title, leverTrue, leverFalse, coords, sendCoords }) {
-    const [showElem, setShowElem] = useState(false)
+export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
+    const { leverTrue } = useContext(Context)
     const classes = useStyles();
     console.log(img)
 
@@ -45,8 +46,13 @@ export default function ImgMediaCard({ img, text, title, leverTrue, leverFalse, 
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={click}>
+                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={() => {
+                    leverTrue()
+                }}>
                     Перейти
+                    </Button>
+                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={click}>
+                    Маршрут
                     </Button>
             </CardActions>
 

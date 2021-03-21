@@ -5,6 +5,8 @@ import RightPanel from './components/RightPanel'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import axios from 'axios'
+import { Context } from '../../context/index'
+import SideBar from './components/SideBar'
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -43,17 +45,21 @@ const MainPageYoung = () => {
         setMapZoom(11)
     }
 
+
     return (
-        <Layout>
-            <Grid container className={classes.container}>
-                <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                    <MapComponent data={data} center={mapCenter} zoom={mapZoom} />
+        <Context.Provider value={{ leverTrue, leverFalse }}>
+            <Layout>
+                <Grid container className={classes.container}>
+                    <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
+                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} />
+                    </Grid>
+                    <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
+                        {state ? <SideBar /> :
+                            <RightPanel data={data} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
+                    </Grid>
                 </Grid>
-                <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
-                    <RightPanel data={data} state={state} setCoords={updateMapCenter} />
-                </Grid>
-            </Grid>
-        </Layout>
+            </Layout>
+        </Context.Provider>
     )
 }
 
