@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../../../components/Card'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const RightPanel = ({ data, setCoords, over, height }) => {
+const RightPanel = ({ data, setCoords, over, height, routes, setIndexArray }) => {
     const classes = useStyles()
     const [value, setValue] = React.useState(0);
     const theme = useTheme();
@@ -83,9 +83,16 @@ const RightPanel = ({ data, setCoords, over, height }) => {
     };
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        if (value == 0) {
+            setIndexArray(true)
+        } else {
+            setIndexArray(false)
+        }
+        console.log('asdasdads', value)
     };
     const handleChangeIndex = (index) => {
         setValue(index);
+
     };
     return (
         <div>
@@ -133,7 +140,7 @@ const RightPanel = ({ data, setCoords, over, height }) => {
                             wrap='wrap'
                             container
                         >
-                            {data.map((item, index) => (
+                            {routes.map((item, index) => (
                                 <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
                                     <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
                                 </Grid>
@@ -142,7 +149,6 @@ const RightPanel = ({ data, setCoords, over, height }) => {
                     </TabPanel>
                 </div>
             </SwipeableViews>
-
         </div>
     )
 

@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
 
 const MainPageYoung = () => {
     const [data, setData] = useState([])
+
+    const [routes, setRoutes] = useState([])
+    const [indexArray, setIndexArray] = useState(true)
+
     const [state, setState] = useState(false)
     const [sideData, setSideData] = useState([])
 
@@ -37,12 +41,18 @@ const MainPageYoung = () => {
         axios.get('http://localhost:3000/posts').then(res => setData(res.data))
     }, [])
 
+    useEffect(() => {
+        axios.get('http://localhost:3000/route').then(res => setRoutes(res.data))
+    }, [])
+
     const leverTrue = (id) => {
         setState(true)
-        setSideData(data.find((el) => {
+        setSideData(indexArray ? data.find((el) => {
             return id == el.id
-        }))
-        console.log(data)
+        }) : routes.find((el) => {
+            return id == el.id
+        })
+        )
     }
     const leverFalse = () => {
         setState(false)
@@ -68,7 +78,7 @@ const MainPageYoung = () => {
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
                         {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :
-                            <RightPanel data={data} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
+                            <RightPanel setIndexArray={setIndexArray} data={data} routes={routes} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
                     </Grid>
                 </Grid>
             </Layout>
