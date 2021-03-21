@@ -2,12 +2,45 @@ import React, { useState } from 'react'
 import Card from '../../../components/Card'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Box, TabScrollButton, IconButton, } from '@material-ui/core';
 import Tabs from '@material-ui/core/Tabs';
-import { Box, TabScrollButton, IconButton } from '@material-ui/core';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Tab from '@material-ui/core/Tab';
+import Paper from '@material-ui/core/Paper';
+import SwipeableViews from 'react-swipeable-views';
+
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`full-width-tabpanel-${index}`}
+            aria-labelledby={`full-width-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box p={3}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+function a11yProps(index) {
+    return {
+        id: `full-width-tab-${index}`,
+        'aria-controls': `full-width-tabpanel-${index}`,
+    };
+}
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        backgroundColor: theme.palette.background.paper,
+        width: 500,
+    },
     container: {
         display: 'flex',
         flexDirection: 'column',
@@ -43,26 +76,69 @@ const useStyles = makeStyles((theme) => ({
 
 const RightPanel = ({ data, setCoords, over, height }) => {
     const classes = useStyles()
+    const [value, setValue] = React.useState(0);
+    const theme = useTheme();
     const sendCoords = (value) => {
         setCoords(value)
     };
+
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+    const handleChangeIndex = (index) => {
+        setValue(index);
+    };
     return (
         <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
+            <Box style={{ marginTop: 40, }}>
+                <Typography variant="h8" className={classes.TextStyle}>Фильтры поиска:</Typography>
+                <Paper square className={classes.Backround}>
+                    <Tabs
+                        value={value}
+                        indicatorColor="primary"
+                        onChange={handleChange}
+                    >
+                        <Tab label="Достопримечательности" />
+                        <Tab label="Маршруты" />
+                    </Tabs>
+                </Paper>
+            </Box>
             <Box>
                 <Box style={{ marginTop: 20, marginBottom: 10 }}>
-                    <Typography variant="h6" className={classes.TextStyle}>Lorem</Typography>
+                    <Typography variant="h6" className={classes.TextStyle}>Результат:</Typography>
                 </Box>
             </Box>
-            <Grid
-                wrap='wrap'
-                container
+            <SwipeableViews
+                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                index={value}
+                onChangeIndex={handleChangeIndex}
             >
-                {data.map((item, index) => (
-                    <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                        <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                <TabPanel value={value} index={0} dir={theme.direction}>
+                    <Grid
+                        wrap='wrap'
+                        container
+                    >
+                        {data.map((item, index) => (
+                            <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
+                                <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                            </Grid>
+                        ))}
                     </Grid>
-                ))}
-            </Grid>
+                </TabPanel>
+                <TabPanel value={value} index={1} dir={theme.direction}>
+                    <Grid
+                        wrap='wrap'
+                        container
+                    >
+                        {data.map((item, index) => (
+                            <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
+                                <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                            </Grid>
+                        ))}
+                    </Grid>
+                </TabPanel>
+            </SwipeableViews>
         </div>
     )
 
