@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
 
 const MainPageYoung = () => {
     const [data, setData] = useState([])
+
+    const [routes, setRoutes] = useState([])
+
     const [state, setState] = useState(false)
     const [sideData, setSideData] = useState([])
 
@@ -35,6 +38,10 @@ const MainPageYoung = () => {
 
     useEffect(() => {
         axios.get('http://localhost:3000/posts').then(res => setData(res.data))
+    }, [])
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/route').then(res => setRoutes(res.data))
     }, [])
 
     const leverTrue = (id) => {
@@ -68,7 +75,7 @@ const MainPageYoung = () => {
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
                         {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :
-                            <RightPanel data={data} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
+                            <RightPanel data={data} routes={routes} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
                     </Grid>
                 </Grid>
             </Layout>
