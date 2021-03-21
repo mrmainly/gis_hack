@@ -76,13 +76,11 @@ const useStyles = makeStyles((theme) => ({
 
 const RightPanel = ({ data, setCoords, over, height }) => {
     const classes = useStyles()
-    const [value, setValue] = React.useState(1);
+    const [value, setValue] = React.useState(0);
     const theme = useTheme();
     const sendCoords = (value) => {
         setCoords(value)
     };
-
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -90,7 +88,7 @@ const RightPanel = ({ data, setCoords, over, height }) => {
         setValue(index);
     };
     return (
-        <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
+        <div>
             <Box style={{ marginTop: 40, marginLeft: 20 }}>
                 <Typography variant="h8" className={classes.TextStyle}>Фильтры поиска:</Typography>
                 <Paper square className={classes.Backround}>
@@ -115,31 +113,36 @@ const RightPanel = ({ data, setCoords, over, height }) => {
                 index={value}
                 onChangeIndex={handleChangeIndex}
             >
-                <TabPanel value={value} index={0} dir={theme.direction}>
-                    <Grid
-                        wrap='wrap'
-                        container
-                    >
-                        {data.map((item, index) => (
-                            <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                                <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
-                            </Grid>
-                        ))}
-                    </Grid>
-                </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>
-                    <Grid
-                        wrap='wrap'
-                        container
-                    >
-                        {data.map((item, index) => (
-                            <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                                <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
-                            </Grid>
-                        ))}
-                    </Grid>
-                </TabPanel>
+                <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
+                    <TabPanel value={value} index={0} dir={theme.direction}>
+                        <Grid
+                            wrap='wrap'
+                            container
+                        >
+                            {data.map((item, index) => (
+                                <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
+                                    <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </TabPanel>
+                </div>
+                <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
+                    <TabPanel value={value} index={1} dir={theme.direction}>
+                        <Grid
+                            wrap='wrap'
+                            container
+                        >
+                            {data.map((item, index) => (
+                                <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
+                                    <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </TabPanel>
+                </div>
             </SwipeableViews>
+
         </div>
     )
 
