@@ -20,10 +20,14 @@ const useStyles = makeStyles({
     },
 });
 
-export default function ImgMediaCard({ img, text, title, leverTrue, leverFalse }) {
+export default function ImgMediaCard({ img, text, title, leverTrue, leverFalse, coords, sendCoords }) {
     const [showElem, setShowElem] = useState(false)
     const classes = useStyles();
     console.log(img)
+
+    const click = () => {
+        sendCoords(coords)
+    }
 
     return (
         <Card className={classes.root}>
@@ -41,7 +45,7 @@ export default function ImgMediaCard({ img, text, title, leverTrue, leverFalse }
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }}>
+                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={click}>
                     Перейти
                     </Button>
             </CardActions>

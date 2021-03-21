@@ -27,12 +27,16 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-const RightPanel = ({ data, state }) => {
+const RightPanel = ({ data, state, setCoords }) => {
     const classes = useStyles()
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
+    };
+
+    const sendCoords = (value) => {
+        setCoords(value)
     };
 
     const getFalse = () => {
@@ -60,7 +64,7 @@ const RightPanel = ({ data, state }) => {
                 >
                     {data.map((item, index) => (
                         <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                            <Card title={item.title} img={item.image} text={item.text} />
+                            <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} />
                         </Grid>
                     ))}
                 </Grid>

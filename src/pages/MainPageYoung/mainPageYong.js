@@ -20,7 +20,12 @@ const MainPageYoung = () => {
     const [data, setData] = useState([])
     const [state, setState] = useState(false)
 
+    const [mapCenter, setMapCenter] = useState([67.792508, 129.868496])
+    const [mapZoom, setMapZoom] = useState(9)
+
     const classes = useStyles()
+
+    // let mapCenter = [67.792508, 129.868496]
 
     useEffect(() => {
         axios.get('http://localhost:3000/posts').then(res => setData(res.data))
@@ -33,14 +38,19 @@ const MainPageYoung = () => {
         setState(false)
     }
 
+    const updateMapCenter = (value) => {
+        setMapCenter(value)
+        setMapZoom(11)
+    }
+
     return (
         <Layout>
             <Grid container className={classes.container}>
                 <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                    <MapComponent />
+                    <MapComponent data={data} center={mapCenter} zoom={mapZoom} />
                 </Grid>
                 <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
-                    <RightPanel data={data} state={state} />
+                    <RightPanel data={data} state={state} setCoords={updateMapCenter} />
                 </Grid>
             </Grid>
         </Layout>
