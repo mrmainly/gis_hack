@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
         backgroundColor: '#252525'
     },
     btn: {
-        background: '#00FFC2',
+        background: '#24ca13',
         borderRadius: 3,
         border: 0,
         height: 48,

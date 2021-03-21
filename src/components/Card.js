@@ -17,28 +17,26 @@ const useStyles = makeStyles({
         marginRight: 10,
         marginTop: 10,
         borderBottomColor: 'blue',
-        borderBottom: 2
+        borderBottom: 2,
+        backgroundColor: '#171717',
     },
     btn: {
         background: '#00FFC2',
         borderRadius: 3,
         border: 0,
-        height: 48,
-        padding: '0 30px',
+        marginLeft: 10,
+        marginBottom: 10,
         boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     }
 });
 
-export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
+export default function ImgMediaCard({ img, text, coords, sendCoords, id, title }) {
     const { leverTrue } = useContext(Context)
     const classes = useStyles();
     console.log(img)
 
     const click = (id) => {
-        sendCoords({
-            id,
-            coords,
-        })
+        sendCoords(coords)
         leverTrue(id)
     }
 
@@ -53,7 +51,10 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
                 title="Contemplative Reptile"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p" style={{ height: 55, textOverflow: 'ellipsis', overflow: 'hidden' }}>
+                <Typography variant="h6" color="textSecondary" component="p" style={{ color: 'white', marginTop: '-50px', marginBottom: 10 }}>
+                    {title}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p" style={{ height: 55, textOverflow: 'ellipsis', overflow: 'hidden', color: 'white' }}>
                     {text}
                 </Typography>
             </CardContent>
