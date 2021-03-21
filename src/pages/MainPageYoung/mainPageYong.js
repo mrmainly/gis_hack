@@ -61,6 +61,7 @@ const MainPageYoung = () => {
     }
 
     const updateMapCenter = (value) => {
+        console.log('value: ', value)
         setMapCenter(value.coords)
         setSelectedPlace(value.id)
         setMapZoom(10)

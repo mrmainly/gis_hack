@@ -39,7 +39,10 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id, title,
         leverTrue(id)
 
         if (coords && coords.length < 3) {
-            sendCoords(coords)
+            sendCoords({
+                coords,
+                id
+            })
         }
     }
 
