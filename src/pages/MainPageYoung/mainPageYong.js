@@ -26,6 +26,8 @@ const MainPageYoung = () => {
     const [mapCenter, setMapCenter] = useState([67.792508, 129.868496])
     const [mapZoom, setMapZoom] = useState(9)
 
+    const [video, setVideo] = useState(false)
+
     const classes = useStyles()
 
     // let mapCenter = [67.792508, 129.868496]
@@ -50,16 +52,20 @@ const MainPageYoung = () => {
         setMapZoom(11)
     }
 
+    const _setVideo = (value) => {
+        setVideo(value)
+    }
+
 
     return (
         <Context.Provider value={{ leverTrue, leverFalse }}>
             <Layout>
                 <Grid container className={classes.container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} />
+                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} />
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
-                        {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} /> :
+                        {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :
                             <RightPanel data={data} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
                     </Grid>
                 </Grid>

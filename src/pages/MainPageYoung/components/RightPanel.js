@@ -50,7 +50,7 @@ const RightPanel = ({ data, setCoords, over, height }) => {
         <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
             <Box>
                 <Box style={{ marginTop: 20, marginBottom: 10 }}>
-                    <Typography variant="h6" className={classes.TextStyle}>Lorem</Typography>
+                    <Typography variant="h6" className={classes.TextStyle}>Достопримечательности</Typography>
                 </Box>
             </Box>
             <Grid

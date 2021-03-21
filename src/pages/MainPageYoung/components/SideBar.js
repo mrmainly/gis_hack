@@ -6,8 +6,13 @@ import axios from 'axios'
 import { Context } from '../../../context/index'
 
 
-const SideBar = ({ title, text, img, }) => {
+const SideBar = ({ title, text, img, setVideo }) => {
     const { leverFalse } = useContext(Context)
+
+    const showVideo = () => {
+        setVideo(true)
+    }
+
     return (
         <div>
             <div>
@@ -17,9 +22,17 @@ const SideBar = ({ title, text, img, }) => {
                     }} />
                 </IconButton>
             </div>
-            <img src={img} />
-            <p>{title}</p>
-            <p>{text}</p>
+
+            <div class="place-single">
+                <img src={img} />
+                <p class="place-single__title">{title}</p>
+                <p>{text}</p>
+
+                <p>
+                    <button class="btn" onClick={showVideo}>Посмотреть видео</button>
+                </p>
+            </div>
+            
         </div>
     )
 }
