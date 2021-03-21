@@ -34,7 +34,8 @@ const HomePage = () => {
     //     console.log('we user', user)
     // }, [user])
     const [data, setData] = useState([])
-
+    const [rout, setRout] = useState([])
+    const [indexArray, setIndexArray] = useState(true)
     const leverTrue = () => {
         console.log('')
     }
@@ -45,13 +46,16 @@ const HomePage = () => {
     useEffect(() => {
         axios.get('http://localhost:3000/posts').then(res => setData(res.data))
     }, [])
+    useEffect(() => {
+        axios.get('http://localhost:3000/route').then(res => setRout(res.data))
+    }, [])
     return (
         <Context.Provider value={{ leverTrue }}>
             <Layout>
                 <BigPicture />
                 <Box className={classes.container}>
                     <Grid item lg={6} sm={8} md={8} xl={6} xs={9}>
-                        <SidePanel data={data} over={'visible'} height={'100%'} click={click} />
+                        <SidePanel data={data} over={'visible'} height={'100%'} click={click} routesList={rout} setIndexArray={setIndexArray} />
                     </Grid>
                 </Box>
             </Layout>

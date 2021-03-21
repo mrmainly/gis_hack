@@ -50,7 +50,9 @@ const MainPageYoung = () => {
 
     const leverTrue = (id) => {
         setState(true)
-        setSideData(data.find((el) => {
+        setSideData(indexArray ? data.find((el) => {
+            return id == el.id
+        }) : routes.find((el) => {
             return id == el.id
         }))
     }
