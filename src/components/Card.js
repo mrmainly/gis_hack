@@ -26,8 +26,9 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
     const classes = useStyles();
     console.log(img)
 
-    const click = () => {
+    const click = (id) => {
         sendCoords(coords)
+        leverTrue(id)
     }
 
     return (
@@ -47,12 +48,9 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
             </CardContent>
             <CardActions>
                 <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={() => {
-                    leverTrue(id)
+                    click(id)
                 }}>
                     Перейти
-                    </Button>
-                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={click}>
-                    аршрут
                     </Button>
             </CardActions>
 
