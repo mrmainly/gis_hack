@@ -50,6 +50,9 @@ const MainPageYoung = () => {
 
     const leverTrue = (id) => {
         setState(true)
+
+        console.log('indexArray: ', indexArray)
+
         setSideData(indexArray ? data.find((el) => {
             return id == el.id
         }) : routes.find((el) => {
@@ -61,7 +64,7 @@ const MainPageYoung = () => {
     }
 
     const updateMapCenter = (value) => {
-        console.log('value: ', value)
+        // console.log('value: ', value)
         setMapCenter(value.coords)
         setSelectedPlace(value.id)
         setMapZoom(10)

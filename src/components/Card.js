@@ -43,12 +43,16 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id, title,
                 coords,
                 id
             })
+        } else {
+            sendRouteCoords({
+                coords,
+                id,
+            })
         }
     }
 
     return (
         <Card className={classes.root}>
-
             <CardMedia
                 component="img"
                 alt="Contemplative Reptile"

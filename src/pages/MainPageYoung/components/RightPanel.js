@@ -82,26 +82,33 @@ const RightPanel = ({ data, setCoords, over, height, routesList, setIndexArray, 
         setCoords(value)
     };
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        setValue(newValue)
+
         if (value === 0) {
             setIndexArray(true)
         } else {
             setIndexArray(false)
         }
-        console.log('asdasdads', value)
+        // console.log('asdasdads', value)
     };
     const handleChangeIndex = (index) => {
         setValue(index);
     };
 
+    const updateCoords = (value) => {
+        // console.log('value: ', value)
+    }
+
     useEffect(() => {
         console.log('asdadsasd', routesList)
     }, [])
 
+    //
+
     return (
         <div>
-            <Box style={{ marginTop: 40, marginLeft: 20 }}>
-                <Typography variant="h8" className={classes.TextStyle}>Фильтры поиска:</Typography>
+            <Box style={{ marginTop: 20, marginLeft: 20 }}>
+                {/* <Typography variant="h8" className={classes.TextStyle}>Фильтры поиска:</Typography> */}
                 <Paper square className={classes.Backround}>
                     <Tabs
                         value={value}
@@ -112,11 +119,11 @@ const RightPanel = ({ data, setCoords, over, height, routesList, setIndexArray, 
                         <Tab label="Маршруты" />
                     </Tabs>
                 </Paper>
-                <Box>
+                {/* <Box>
                     <Box style={{ marginTop: 20, marginBottom: 10 }}>
                         <Typography variant="h6" className={classes.TextStyle}>Результат:</Typography>
                     </Box>
-                </Box>
+                </Box> */}
             </Box>
 
             <SwipeableViews
@@ -146,7 +153,7 @@ const RightPanel = ({ data, setCoords, over, height, routesList, setIndexArray, 
                         >
                             {routesList ? routesList.map((item, index) => (
                                 <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                                    <Card title={item.title} img={item.image} text={item.text} id={item.id} />
+                                    <Card sendRouteCoords={updateCoords} coords={item.coords} title={item.title} img={item.image} text={item.text} id={item.id} />
                                 </Grid>
                             )) : 'adsas'}
                         </Grid>
