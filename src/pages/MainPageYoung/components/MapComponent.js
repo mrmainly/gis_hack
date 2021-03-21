@@ -40,7 +40,7 @@ const MapComponent = (props) => {
                     {props.routes.map(route => <Polyline geometry={route.coords}
                         options={{
                             strokeWidth: 5,
-                            strokeColor: '#000'
+                            // strokeColor: route.id === props.selectedRoute ? '#00FFC2' : '#000'
                         }}
                         properties={{
                             balloonContentHeader: route.title,

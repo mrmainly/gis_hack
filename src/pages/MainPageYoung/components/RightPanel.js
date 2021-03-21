@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const RightPanel = ({ data, setCoords, over, height, routes }) => {
+const RightPanel = ({ data, setCoords, over, height, routes, setRoute }) => {
     const classes = useStyles()
     const [value, setValue] = React.useState(1);
     const theme = useTheme();
@@ -82,6 +82,9 @@ const RightPanel = ({ data, setCoords, over, height, routes }) => {
         setCoords(value)
     };
 
+    const sendRouteCoords = (value) => {
+        setRoute(value)
+    }
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -134,7 +137,7 @@ const RightPanel = ({ data, setCoords, over, height, routes }) => {
                     >
                         {routes.map((item, index) => (
                             <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                                <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                                <Card isRoute={true} coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} sendRouteCoords={sendRouteCoords} id={item.id} />
                             </Grid>
                         ))}
                     </Grid>

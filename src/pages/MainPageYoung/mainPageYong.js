@@ -31,6 +31,7 @@ const MainPageYoung = () => {
 
     const [video, setVideo] = useState(false)
     const [selectedPlace, setSelectedPlace] = useState(0)
+    const [selectedRoute, setSelectedRoute] = useState(0)
 
     const classes = useStyles()
 
@@ -61,6 +62,12 @@ const MainPageYoung = () => {
         setMapZoom(10)
     }
 
+    const updateRouteCenter = (value) => {
+        setMapCenter(value.coords[0])
+        setSelectedRoute(value.id)
+        setMapZoom(16)
+    }
+
     const _setVideo = (value) => {
         setVideo(value)
     }
@@ -71,11 +78,11 @@ const MainPageYoung = () => {
             <Layout>
                 <Grid container className={classes.container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                        <MapComponent routes={routes} data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} />
+                        <MapComponent routes={routes} data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} selectedRoute={selectedRoute} />
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
                         {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :
-                            <RightPanel data={data} routes={routes} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
+                            <RightPanel data={data} routes={routes} state={state} setCoords={updateMapCenter} setRoute={updateRouteCenter} over={'scroll'} height={'800'} />}
                     </Grid>
                 </Grid>
             </Layout>
