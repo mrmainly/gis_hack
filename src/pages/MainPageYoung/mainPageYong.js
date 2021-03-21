@@ -27,6 +27,7 @@ const MainPageYoung = () => {
     const [mapZoom, setMapZoom] = useState(9)
 
     const [video, setVideo] = useState(false)
+    const [selectedPlace, setSelectedPlace] = useState(0)
 
     const classes = useStyles()
 
@@ -48,8 +49,9 @@ const MainPageYoung = () => {
     }
 
     const updateMapCenter = (value) => {
-        setMapCenter(value)
-        setMapZoom(11)
+        setMapCenter(value.coords)
+        setSelectedPlace(value.id)
+        setMapZoom(10)
     }
 
     const _setVideo = (value) => {
@@ -62,7 +64,7 @@ const MainPageYoung = () => {
             <Layout>
                 <Grid container className={classes.container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} />
+                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} />
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
                         {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :

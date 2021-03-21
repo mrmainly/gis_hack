@@ -35,7 +35,10 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
     console.log(img)
 
     const click = (id) => {
-        sendCoords(coords)
+        sendCoords({
+            id,
+            coords,
+        })
         leverTrue(id)
     }
 

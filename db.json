@@ -4,59 +4,64 @@
             "image": "https://lh3.googleusercontent.com/proxy/sUOsYg1i8cbutUG_7oQwHeeVEAOXR0N5tRwAN2q1zN-E_qiYJ_8CnBpw5gWnLjq90l-fQSO849_3IHvkbhI5EqAFo7wreIGsZK3Wzc5ZMxVR101Xt6z1qVjDUGEAQDE9kQ",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "id": "1",
+            "id": 1,
             "coords": [67.876006, 129.721554]
         },
         {
             "image": "https://russian.eurasianet.org/sites/default/files/styles/article/public/images/russian/1_17.jpg?itok=ZAsKFv06",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "id": "2",
+            "id": 2,
             "coords": [67.734766, 129.092586]
         },
         {
             "image": "https://www.centralasia-travel.com/uploads/gallery/1384/kyrgyz-yurt-1200-1.jpg",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "id": "3",
+            "id": 3,
             "coords": [67.601052, 129.803951]
         },
         {
             "image": "https://ethnomir.ru/upload/medialibrary/a3c/yurty-5.jpg",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "id": "4",
+            "id": 4,
             "coords": [67.959721, 131.028927]
         },
         {
             "image": "https://i.pinimg.com/originals/a0/99/47/a09947713c74495fde5e41eef22fa676.jpg",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "coords": [68.110878, 129.636410]
+            "coords": [68.110878, 129.636410],
+            "id": 5
         },
         {
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOkselBIB1kanyVHQVmpMMUo8Rd_P1SYQ4iQ&usqp=CAU",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "coords": [67.705581, 130.798214]
+            "coords": [67.705581, 130.798214],
+            "id": 6
         },
         {
             "image": "https://st2.depositphotos.com/6861126/9642/i/950/depositphotos_96424564-stock-photo-kazakh-yurt-in-the-autumn.jpg",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "id": "4",
+            "id": 7,
             "coords": [67.598956, 130.174740]
         },
         {
             "image": "https://moscow-airports.com/wp-content/uploads/2020/06/kak-v-kalmykii-byl-sozdan-otel-iz-yurt-i-vyshlo-li-chto-to-iz-etoj-zatei-1.jpeg",
             "title": "title for text",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
+            "id": 8,
+            "coords": [67.729371, 130.204162]
         },
         {
             "image": "https://lh3.googleusercontent.com/proxy/0MgJsZavYNSyMarMt1okda6yazvoF4ptFfKt7_nzOqwNTUAW1IeG_vTyAFwtJIC1hdokK6AlPA_iJjkRw6rdB1jlABVolV0iUef-NSDVMh5jlfqThEvP4hhrzrkZ_3nM33AwRpbRhw",
             "title": "title for text",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do",
-            "coords": [67.576944, 128.760250]
+            "coords": [67.576944, 128.760250],
+            "id": 9
         }
     ],
     "route": [
