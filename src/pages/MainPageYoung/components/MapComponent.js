@@ -1,6 +1,7 @@
 import React from 'react'
 import { YMaps, Map, Placemark, Polyline } from "react-yandex-maps";
 
+import mapIconSelected from './mapIconSelected.svg'
 import mapIcon from './mapIcon.svg'
 
 const mapStyles = {
@@ -31,7 +32,7 @@ const MapComponent = (props) => {
                         }}
                         options={{
                             iconLayout: 'default#image',
-                            iconImageHref: mapIcon,
+                            iconImageHref: item.id === props.selectedPlace ? mapIconSelected : mapIcon,
                             iconImageSize: [30, 42],
                         }}
                     />)}
