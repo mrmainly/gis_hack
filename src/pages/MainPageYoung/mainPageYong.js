@@ -32,6 +32,7 @@ const MainPageYoung = () => {
 
     const [video, setVideo] = useState(false)
     const [selectedPlace, setSelectedPlace] = useState(0)
+    const [selectedRoute, setSelectedRoute] = useState(0)
 
     const classes = useStyles()
 
@@ -42,17 +43,16 @@ const MainPageYoung = () => {
     }, [])
 
     useEffect(() => {
-        axios.get('http://localhost:3000/route').then(res => setRoutes(res.data))
+        axios.get('http://localhost:3000/route').then((res) => {
+            setRoutes(res.data)
+        })
     }, [])
 
     const leverTrue = (id) => {
         setState(true)
-        setSideData(indexArray ? data.find((el) => {
+        setSideData(data.find((el) => {
             return id == el.id
-        }) : routes.find((el) => {
-            return id == el.id
-        })
-        )
+        }))
     }
     const leverFalse = () => {
         setState(false)
@@ -74,11 +74,11 @@ const MainPageYoung = () => {
             <Layout>
                 <Grid container className={classes.container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} />
+                        <MapComponent routes={routes} data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} selectedRoute={selectedRoute} />
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
                         {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :
-                            <RightPanel setIndexArray={setIndexArray} data={data} routes={routes} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
+                            <RightPanel setIndexArray={setIndexArray} data={data} routesList={routes} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
                     </Grid>
                 </Grid>
             </Layout>

@@ -30,14 +30,17 @@ const useStyles = makeStyles({
     }
 });
 
-export default function ImgMediaCard({ img, text, coords, sendCoords, id, title }) {
+export default function ImgMediaCard({ img, text, coords, sendCoords, id, title, sendRouteCoords, isRoute }) {
     const { leverTrue } = useContext(Context)
     const classes = useStyles();
     console.log(img)
 
     const click = (id) => {
-        sendCoords(coords)
         leverTrue(id)
+
+        if (coords && coords.length < 3) {
+            sendCoords(coords)
+        }
     }
 
     return (

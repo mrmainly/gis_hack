@@ -6,6 +6,7 @@ import { Context } from '../../context/index'
 import { Box, Grid, } from '@material-ui/core'
 import axios from 'axios'
 import { makeStyles } from '@material-ui/core/styles';
+import { useHistory } from 'react-router-dom'
 
 
 const useStyles = makeStyles(() => ({
@@ -27,6 +28,7 @@ const useStyles = makeStyles(() => ({
 
 const HomePage = () => {
     const classes = useStyles()
+    const history = useHistory()
     // const { user } = useContext(Context);
     // useEffect(() => {
     //     console.log('we user', user)
@@ -35,6 +37,9 @@ const HomePage = () => {
 
     const leverTrue = () => {
         console.log('')
+    }
+    const click = () => {
+        history.push('/maps')
     }
 
     useEffect(() => {
@@ -46,7 +51,7 @@ const HomePage = () => {
                 <BigPicture />
                 <Box className={classes.container}>
                     <Grid item lg={6} sm={8} md={8} xl={6} xs={9}>
-                        <SidePanel data={data} over={'visible'} height={'100%'} />
+                        <SidePanel data={data} over={'visible'} height={'100%'} click={click} />
                     </Grid>
                 </Box>
             </Layout>

@@ -73,8 +73,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 15
     }
 }));
+const RightPanel = ({ data, setCoords, over, height, routesList, setIndexArray, }) => {
 
-const RightPanel = ({ data, setCoords, over, height, routes, setIndexArray }) => {
     const classes = useStyles()
     const [value, setValue] = React.useState(0);
     const theme = useTheme();
@@ -83,7 +83,7 @@ const RightPanel = ({ data, setCoords, over, height, routes, setIndexArray }) =>
     };
     const handleChange = (event, newValue) => {
         setValue(newValue);
-        if (value == 0) {
+        if (value === 0) {
             setIndexArray(true)
         } else {
             setIndexArray(false)
@@ -92,8 +92,12 @@ const RightPanel = ({ data, setCoords, over, height, routes, setIndexArray }) =>
     };
     const handleChangeIndex = (index) => {
         setValue(index);
-
     };
+
+    useEffect(() => {
+        console.log('asdadsasd', routesList)
+    }, [])
+
     return (
         <div>
             <Box style={{ marginTop: 40, marginLeft: 20 }}>
@@ -140,11 +144,11 @@ const RightPanel = ({ data, setCoords, over, height, routes, setIndexArray }) =>
                             wrap='wrap'
                             container
                         >
-                            {routes.map((item, index) => (
+                            {routesList ? routesList.map((item, index) => (
                                 <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                                    <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
+                                    <Card title={item.title} img={item.image} text={item.text} id={item.id} />
                                 </Grid>
-                            ))}
+                            )) : 'adsas'}
                         </Grid>
                     </TabPanel>
                 </div>
