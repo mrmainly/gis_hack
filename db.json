@@ -66,14 +66,58 @@
     ],
     "route": [
         {
-            "id": "1",
+            "id": 1,
             "title": "kokoslayer",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzjNU4tiw5c0ytvW7BdATuVJ1YnbEF7iS7w&usqp=CAU",
+            "coords": [
+                [67.789841, 130.309443],
+                [67.788927, 130.304300],
+                [67.788054, 130.298214],
+                [67.786664, 130.294961],
+                [67.785631, 130.291708],
+                [67.785433, 130.288140],
+                [67.785473, 130.283732],
+                [67.785433, 130.280059],
+                [67.784281, 130.275442]
+            ],
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
         },
         {
-            "id": "2",
+            "id": 2,
             "title": "jojo",
-            "image": "https://www.google.com/search?q=jojo&sxsrf=ALeKk01zHgACiYdMnQxHhrXbkq6Ikjpn9Q:1615426067778&tbm=isch&source=iu&ictx=1&fir=e6YwNLukbs-f-M%252CHFs1OwWyB-sqOM%252C_&vet=1&usg=AI4_-kSsccEAcUovnmRpO_6GQX43JuHwUQ&sa=X&ved=2ahUKEwjw3LiHi6fvAhVtoosKHW7oDIYQ9QF6BAgREAE#imgrc=e6YwNLukbs-f-M"
+            "image": "https://www.google.com/search?q=jojo&sxsrf=ALeKk01zHgACiYdMnQxHhrXbkq6Ikjpn9Q:1615426067778&tbm=isch&source=iu&ictx=1&fir=e6YwNLukbs-f-M%252CHFs1OwWyB-sqOM%252C_&vet=1&usg=AI4_-kSsccEAcUovnmRpO_6GQX43JuHwUQ&sa=X&ved=2ahUKEwjw3LiHi6fvAhVtoosKHW7oDIYQ9QF6BAgREAE#imgrc=e6YwNLukbs-f-M",
+            "coords": [
+                [67.768906, 130.378808],
+                [67.768390, 130.385209],
+                [67.767754, 130.391925],
+                [67.766998, 130.396018],
+                [67.765965, 130.400845],
+                [67.764653, 130.404098],
+                [67.763540, 130.408191],
+                [67.763302, 130.415537],
+                [67.762984, 130.422043],
+                [67.762348, 130.428340],
+                [67.762984, 130.433587]
+            ],
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
+        },
+        {
+            "id": 3,
+            "title": "jojo",
+            "image": "https://www.google.com/search?q=jojo&sxsrf=ALeKk01zHgACiYdMnQxHhrXbkq6Ikjpn9Q:1615426067778&tbm=isch&source=iu&ictx=1&fir=e6YwNLukbs-f-M%252CHFs1OwWyB-sqOM%252C_&vet=1&usg=AI4_-kSsccEAcUovnmRpO_6GQX43JuHwUQ&sa=X&ved=2ahUKEwjw3LiHi6fvAhVtoosKHW7oDIYQ9QF6BAgREAE#imgrc=e6YwNLukbs-f-M",
+            "coords": [
+                [67.813606, 130.330907],
+                [67.815490, 130.324399],
+                [67.817688, 130.321907],
+                [67.819939, 130.320522],
+                [67.822188, 130.316091],
+                [67.823706, 130.311937],
+                [67.823863, 130.307645],
+                [67.824438, 130.303352],
+                [67.823810, 130.302244],
+                [67.823392, 130.295459]
+            ],
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do"
         }
     ]
 }
