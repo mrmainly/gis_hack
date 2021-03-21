@@ -71,7 +71,7 @@ const MainPageYoung = () => {
             <Layout>
                 <Grid container className={classes.container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} xl={6}>
-                        <MapComponent data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} />
+                        <MapComponent routes={routes} data={data} center={mapCenter} zoom={mapZoom} video={video} hideVideo={_setVideo} selectedPlace={selectedPlace} />
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
                         {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} setVideo={_setVideo} /> :

@@ -36,6 +36,20 @@ const MapComponent = (props) => {
                             iconImageSize: [30, 42],
                         }}
                     />)}
+
+                    {props.routes.map(route => <Polyline geometry={route.coords}
+                        options={{
+                            strokeWidth: 5,
+                            strokeColor: '#000'
+                        }}
+                        properties={{
+                            balloonContentHeader: route.title,
+                            balloonContentBody: `
+                                <img width="300" src="${route.image}" />
+                                <p>${route.text}</p>
+                            `,
+                        }}
+                    />)}
                 </Map>
             </YMaps>
 
