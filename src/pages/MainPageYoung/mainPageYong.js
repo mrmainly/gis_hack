@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const MainPageYoung = () => {
     const [data, setData] = useState([])
     const [state, setState] = useState(false)
+    const [sideData, setSideData] = useState([])
 
     const [mapCenter, setMapCenter] = useState([67.792508, 129.868496])
     const [mapZoom, setMapZoom] = useState(9)
@@ -33,8 +34,12 @@ const MainPageYoung = () => {
         axios.get('http://localhost:3000/posts').then(res => setData(res.data))
     }, [])
 
-    const leverTrue = () => {
+    const leverTrue = (id) => {
         setState(true)
+        setSideData(data.find((el) => {
+            return id == el.id
+        }))
+        console.log(data)
     }
     const leverFalse = () => {
         setState(false)
@@ -54,7 +59,7 @@ const MainPageYoung = () => {
                         <MapComponent data={data} center={mapCenter} zoom={mapZoom} />
                     </Grid>
                     <Grid className={classes.CardBox} item xs={12} sm={12} lg={6} md={6} xl={6} style={{ backgroundColor: '#252525' }}>
-                        {state ? <SideBar /> :
+                        {state ? <SideBar title={sideData.title} img={sideData.image} text={sideData.text} /> :
                             <RightPanel data={data} state={state} setCoords={updateMapCenter} over={'scroll'} height={'800'} />}
                     </Grid>
                 </Grid>

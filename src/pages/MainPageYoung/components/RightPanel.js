@@ -50,7 +50,7 @@ const RightPanel = ({ data, setCoords, over, height }) => {
         <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
             <Box>
                 <Box style={{ marginTop: 20, marginBottom: 10 }}>
-                    <Typography variant="h6" className={classes.TextStyle}>Ре</Typography>
+                    <Typography variant="h6" className={classes.TextStyle}>Lorem</Typography>
                 </Box>
             </Box>
             <Grid
@@ -59,7 +59,7 @@ const RightPanel = ({ data, setCoords, over, height }) => {
             >
                 {data.map((item, index) => (
                     <Grid item key={index} lg={4} sm={4} md={6} xl={4} xs={12} >
-                        <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} />
+                        <Card coords={item.coords} title={item.title} img={item.image} text={item.text} sendCoords={sendCoords} id={item.id} />
                     </Grid>
                 ))}
             </Grid>

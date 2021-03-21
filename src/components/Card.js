@@ -47,12 +47,12 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
             </CardContent>
             <CardActions>
                 <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={() => {
-                    leverTrue()
+                    leverTrue(id)
                 }}>
                     Перейти
                     </Button>
                 <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={click}>
-                    Маршрут
+                    аршрут
                     </Button>
             </CardActions>
 
