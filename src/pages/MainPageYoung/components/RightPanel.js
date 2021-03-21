@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
 const RightPanel = ({ data, setCoords, over, height, routes }) => {
     const classes = useStyles()
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(1);
     const theme = useTheme();
     const sendCoords = (value) => {
         setCoords(value)
@@ -91,7 +91,7 @@ const RightPanel = ({ data, setCoords, over, height, routes }) => {
     };
     return (
         <div className={classes.container} style={{ overflowY: `${over}`, height: `${height}` }}>
-            <Box style={{ marginTop: 40, }}>
+            <Box style={{ marginTop: 40, marginLeft: 20 }}>
                 <Typography variant="h8" className={classes.TextStyle}>Фильтры поиска:</Typography>
                 <Paper square className={classes.Backround}>
                     <Tabs
@@ -103,12 +103,13 @@ const RightPanel = ({ data, setCoords, over, height, routes }) => {
                         <Tab label="Маршруты" />
                     </Tabs>
                 </Paper>
-            </Box>
-            <Box>
-                <Box style={{ marginTop: 20, marginBottom: 10 }}>
-                    <Typography variant="h6" className={classes.TextStyle}>Результат:</Typography>
+                <Box>
+                    <Box style={{ marginTop: 20, marginBottom: 10 }}>
+                        <Typography variant="h6" className={classes.TextStyle}>Результат:</Typography>
+                    </Box>
                 </Box>
             </Box>
+
             <SwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}
