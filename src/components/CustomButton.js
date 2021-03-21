@@ -7,10 +7,10 @@ import { Box } from "@material-ui/core";
 const useClasses = makeStyles({
     button: {
         display: 'block',
-        backgroundColor: mainTheme.colors.red,
+        backgroundColor: '#00FFC2',
         fontFamily: mainTheme.fontFamily.Roboto,
         fontSize: mainTheme.textSizes.small,
-        color: 'white',
+        color: 'black',
         padding: '13px 15px',
         margin: '40px auto',
         border: 0,

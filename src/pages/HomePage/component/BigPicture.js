@@ -15,6 +15,15 @@ const useStyles = makeStyles(() => ({
         height: 600,
         color: 'white'
     },
+    btn: {
+        color: 'black',
+        background: '#00FFC2',
+        borderRadius: 3,
+        border: 0,
+        height: 48,
+        padding: '0 30px',
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    }
 }));
 
 const BigPicture = () => {
@@ -26,7 +35,7 @@ const BigPicture = () => {
             <Grid item style={{ textAlign: 'center' }} lg={4} sm={6} md={4} xl={3} xs={12}>
                 <Typography style={{ fontSize: 16 }} variant="h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum ac augue et suscipit. Vivamus ac tellus ut massa bibendum aliquam vitae ac diam. Aenean in enim...</Typography>
             </Grid>
-            <Button variant="contained" color="primary" onClick={() => {
+            <Button variant="contained" className={classes.btn} onClick={() => {
                 history.push('/maps')
             }}>
                 Перейти на карты

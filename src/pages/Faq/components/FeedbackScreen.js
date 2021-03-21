@@ -47,6 +47,9 @@ const useClasses = makeStyles({
     textField: {
         maxWidth: 340,
         margin: '10px auto'
+    },
+    btn: {
+        backgroundColor: '#00FFC2',
     }
 
 })

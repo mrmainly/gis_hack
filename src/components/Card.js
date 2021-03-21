@@ -19,6 +19,14 @@ const useStyles = makeStyles({
         borderBottomColor: 'blue',
         borderBottom: 2
     },
+    btn: {
+        background: '#00FFC2',
+        borderRadius: 3,
+        border: 0,
+        height: 48,
+        padding: '0 30px',
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    }
 });
 
 export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
@@ -47,7 +55,7 @@ export default function ImgMediaCard({ img, text, coords, sendCoords, id }) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button variant="contained" color="primary" style={{ backgroundColor: '#0063cc' }} onClick={() => {
+                <Button variant="contained" className={classes.btn} onClick={() => {
                     click(id)
                 }}>
                     Перейти
